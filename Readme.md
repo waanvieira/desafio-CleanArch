@@ -30,9 +30,6 @@ cd desafio-CleanArch
 # executar o projeto
 docker-compose up -d
 
-#Criar migrations
-make migrate
-
 #Excutar o GO
 
 cd cmd/orderSystem
