@@ -6,7 +6,6 @@ networks:
       driver: default
       config:
         - subnet: 172.42.12.0/29
-          # gateway: 172.42.12.1
 
 services:
   mysql:
@@ -24,6 +23,15 @@ services:
     networks:
       - desafio-cleanarch-newtwork
 
+  migrate:
+    image: migrate/migrate
+    networks:
+      - desafio-cleanarch-newtwork
+    volumes:
+      - ./migrations:/migrations
+    command: ["-path", "/migrations/", "-database", "mysql://root:root@tcp(mysql:3306)/orders", "-verbose", "up"]
+    depends_on:
+      - mysql
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
