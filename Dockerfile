@@ -17,4 +17,4 @@ EXPOSE 8000
 EXPOSE 50051
 
 # Command executed when we create the build, it a dummy command
-CMD ["tail", "-f", "/dev/null"]
+CMD ["cp", ".env-example", ".env"]
