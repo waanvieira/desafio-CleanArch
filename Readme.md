@@ -27,14 +27,10 @@ git clone https://github.com/waanvieira/desafio-CleanArch.git
 # entrar na pasta do projeto back end
 cd desafio-CleanArch
 
+# Renomear o arquivo .env-example para .env
+
 # executar o projeto
 docker-compose up -d
-
-#Excutar o GO
-
-cd cmd/orderSystem
-
-go run main.go wire_gen.go 
 
 ```
 
@@ -97,8 +93,13 @@ service OrderService
 
 Depois de selecionar o service, chamar o método
 
-Criar Order - call CreateOrder
-Listar Orders - call ListOrders
+Criar Order 
+<br>
+call CreateOrder
+<br>
+Listar Orders 
+<br>
+call ListOrders
 
 
 
