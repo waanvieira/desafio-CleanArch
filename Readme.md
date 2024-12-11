@@ -24,6 +24,9 @@ https://www.docker.com/get-started/
 # clonar repositório
 git clone https://github.com/waanvieira/desafio-CleanArch.git
 
+# renomear arquivo da pasta
+ /cmd/ordersystem para .env
+
 # entrar na pasta do projeto back end
 cd desafio-CleanArch
 
