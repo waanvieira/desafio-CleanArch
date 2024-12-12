@@ -10,6 +10,7 @@ networks:
 services:
   app:
     build: .
+    entrypoint: dockerize -template .env-example:.env
     container_name: app
     ports:
       - "8080:8080"
@@ -22,6 +23,7 @@ services:
       - desafio-cleanarch-newtwork
     tty: true
     depends_on:
+      - mysql
       - migrate
 
   mysql:
@@ -73,6 +75,7 @@ services:
 
   migrate:
     image: migrate/migrate
+    container_name: migrate
     networks:
       - desafio-cleanarch-newtwork
     volumes:
